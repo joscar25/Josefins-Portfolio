@@ -1,0 +1,72 @@
+:root {
+  --color-menu-link: black;
+
+  --color-card-link: #e4bdff;
+  --color-card-hover-link: #b761f5;
+}
+
+body {
+  background-color: white;
+  color: var(--color-menu-link);
+  margin: 0;
+  padding: 0;
+}
+
+.icons {
+  gap: 70px;
+}
+.my-grid {
+  display: grid;
+  padding: 48px;
+  gap: 20px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  div {
+    background-color: var(--color-card-link);
+    border-radius: 10px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-all;
+    padding: 20px;
+  }
+  a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-menu-link);
+  }
+}
+
+@media (min-width: 700px) {
+  .my-grid {
+    width: 400px;
+    height: auto;
+  }
+  .icons {
+    justify-content: space-between;
+    justify-content: center;
+  }
+  .projekt.kort {
+    justify-content: flex-end;
+  }
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-card-link);
+  border-radius: 10px;
+  font-size: 30px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s ease;
+}
+.card:hover {
+  background-color: var(--color-card-hover-link);
+  text-decoration: underline;
+}
